@@ -76,6 +76,10 @@ function App(): React.JSX.Element {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          <Text>
+            rn的配置还真是繁琐，不过也配置好了，哈哈哈，我们做的已经很好了
+            ，没什么了不起，rn本来也没什么难度，辣鸡, 删除吧 下雨了
+          </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.tsx</Text> to change this
             screen and then come back to see your edits.
