@@ -1,11 +1,16 @@
 import {Button, Layout, Text} from '@ui-kitten/components';
+import {SafeAreaView} from 'react-native-safe-area-context';
 
 const HomeScreen = () => {
   return (
-    <Layout style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      <Text category="h1">Home pages</Text>
-      <Button>home pages</Button>
-    </Layout>
+    <>
+      <Layout style={{flex: 1}}>
+        <SafeAreaView>
+          <Text category="h4">Home pages</Text>
+          <Button>home pages</Button>
+        </SafeAreaView>
+      </Layout>
+    </>
   );
 };
 

@@ -19,18 +19,28 @@ import {
 } from 'react-native';
 
 import AppNavigator from './src/navigator/AppNavigator';
-import {ApplicationProvider} from '@ui-kitten/components';
+import {ApplicationProvider, IconRegistry} from '@ui-kitten/components';
+import {EvaIconsPack} from '@ui-kitten/eva-icons';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
 function App(): React.JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
 
   return (
-    <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
-      <SafeAreaView>
-        <AppNavigator />
-      </SafeAreaView>
-    </ApplicationProvider>
+    <SafeAreaProvider>
+      <IconRegistry icons={EvaIconsPack} />
+      <ApplicationProvider {...eva} theme={{...eva.light, ...theme}}>
+        <View style={styles.content}>
+          <AppNavigator />
+        </View>
+      </ApplicationProvider>
+    </SafeAreaProvider>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {flex: 1},
+  content: {flex: 1},
+});
 
 export default App;
