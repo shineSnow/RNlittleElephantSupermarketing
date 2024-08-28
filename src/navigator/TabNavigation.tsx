@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from '../pages/home';
-import SortScreen from '../pages/category';
+import SortScreen from '../pages/sort';
 import CartScreen from '../pages/cart';
 import RecipesScreen from '../pages/recipes';
 import MyScreen from '../pages/my';
